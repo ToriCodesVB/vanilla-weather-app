@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response.data)
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -39,8 +38,20 @@ function displayTemperature(response) {
   iconElement.src = response.data.condition.icon_url;
 }
 
-let apiKey = "012fe64cfec912f6o0e3deca1b3490t0";
-let city = "Milan"
+function search(city){
+    let apiKey = "012fe64cfec912f6o0e3deca1b3490t0";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
 axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+    console.log(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Milan");
