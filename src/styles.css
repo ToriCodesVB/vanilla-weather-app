@@ -1,15 +1,18 @@
 body {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: #d1fffa;
     font-family: "Montserrat", sans-serif;
 
 }
+.color-button {
+    background: #005985;
+}
 
 h1 {
-    color: #005985;
-    font-size: 30px;
-    font-weight: 400;
+    color: #063650;
+    font-size: 40px;
+    font-weight: 700;
     line-height: 30px;
-    margin-bottom: 0;
+    margin-bottom: 5;
 }
 ul{
     margin: 0;
@@ -29,14 +32,14 @@ li::first-letter {
      text-transform: capitalize;
 }
 .weather-app-wrapper {
-    max-width: 600px;
+    max-width: 800px;
     margin: 30px auto;
 }
 .weather-app {
     padding: 20px;
     border: 1px solid #6DB2CB;
     border-radius: 10px;
-    background: linear-gradient(109.6deg, rgb(116, 255, 217) 11.2%, rgb(88, 200, 223) 91.1%);
+    background: #b2ebf9;
 }
 .overview {
     margin-bottom: 20px;
